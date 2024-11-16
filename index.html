@@ -4,182 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Douman - Portfolio</title>
-    <style>
-        :root {
-            --gradient-light-1: #f0f9ff;
-            --gradient-light-2: #e0f2fe;
-            --gradient-dark-1: #1e293b;
-            --gradient-dark-2: #0f172a;
-            --text-light: #1e293b;
-            --text-dark: #f8fafc;
-            --accent-color: #3b82f6;
-            --border-light: rgba(148, 163, 184, 0.2);
-            --border-dark: rgba(148, 163, 184, 0.1);
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: background-color 0.3s ease;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styling.css">
 
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background: linear-gradient(135deg, var(--gradient-light-1), var(--gradient-light-2));
-            color: var(--text-light);
-            min-height: 100vh;
-        }
-
-        body.dark {
-            background: linear-gradient(135deg, var(--gradient-dark-1), var(--gradient-dark-2));
-            color: var(--text-dark);
-        }
-
-        .navbar {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-light);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 0.75rem 0;
-        }
-
-        body.dark .navbar {
-            background: rgba(15, 23, 42, 0.8);
-            border-bottom: 1px solid var(--border-dark);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .brand-section {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .logo-brand {
-            height: 40px;
-            object-fit: contain;
-        }
-
-        .name-divider {
-            width: 2px;
-            height: 24px;
-            background: var(--accent-color);
-            margin: 0 1rem;
-        }
-
-        .name-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--text-light);
-            white-space: nowrap;
-        }
-
-        body.dark .name-title {
-            color: var(--text-dark);
-        }
-
-        .theme-toggle {
-            background: none;
-            border: none;
-            color: var(--text-light);
-            cursor: pointer;
-            padding: 0.5rem;
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 6px;
-        }
-
-        body.dark .theme-toggle {
-            color: var(--text-dark);
-        }
-
-        .theme-toggle:hover {
-            background: rgba(59, 130, 246, 0.1);
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
-            }
-
-            .name-title {
-                font-size: 1rem;
-            }
-
-            .brand-section {
-                gap: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .name-title {
-                font-size: 0.9rem;
-            }
-        }
-
-        .theme-toggle {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid var(--border-light);
-            color: var(--text-light);
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        body.dark .theme-toggle {
-            color: var(--text-dark);
-            border-color: var(--border-dark);
-            background: rgba(59, 130, 246, 0.2);
-        }
-
-        .theme-toggle:hover {
-            background: rgba(59, 130, 246, 0.2);
-            transform: translateY(-1px);
-        }
-
-        .theme-toggle i {
-            font-size: 1rem;
-        }
-
-        .theme-toggle-text {
-            display: inline;
-        }
-
-        @media (max-width: 640px) {
-            .theme-toggle-text {
-                display: none;
-            }
-
-            .theme-toggle {
-                padding: 0.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
 <nav class="navbar">
-    <div class="container">
+    <div class="nav-container">
         <div class="brand-section">
             <a href="#" class="navbar-brand">
                 <img src="assets/images/digidomain3.png" class="logo-brand" alt="DigiDomain Logo">
@@ -187,35 +20,1471 @@
             <div class="name-divider"></div>
             <span class="name-title">Michael Clinton Douman</span>
         </div>
-
-        <button class="theme-toggle" onclick="toggleTheme()">
-            <i class="fas fa-moon"></i>
-            <span class="theme-toggle-text">Dark Mode</span>
-        </button>
     </div>
 </nav>
 
-<script>
-    function toggleTheme() {
-        document.body.classList.toggle('dark');
-        const themeIcon = document.querySelector('.theme-toggle i');
-        const themeText = document.querySelector('.theme-toggle-text');
+<section class="section-about">
+    <div class="container">
+        <div class="card">
+            <div class="quote">
+                <p>"It's not what you achieve, it's what you overcome. That's what defines your career."</p>
+                <div class="quote-author">- Carlton Fisk</div>
+            </div>
 
-        if (document.body.classList.contains('dark')) {
-            themeIcon.classList.replace('fa-moon', 'fa-sun');
-            themeText.textContent = 'Light Mode';
-        } else {
-            themeIcon.classList.replace('fa-sun', 'fa-moon');
-            themeText.textContent = 'Dark Mode';
+            <p class="about-text">
+                Experienced Full Stack Developer with nine years of expertise in designing, developing, and managing complex web applications. Proficient in a broad range of modern programming languages and frameworks including HTML, PHP (Advanced), AngularJS, React, JavaScript, CSS / Sass / Less, SQL, Laravel, and VueJS.
+            </p>
+
+            <p class="about-text">
+                Adept at collaborating with cross-functional teams to deliver high-quality software solutions, improve performance, and ensure seamless user experiences. Demonstrated ability to lead projects from conception to completion with a strong focus on code quality, scalability, and maintainability. Passionate about staying updated with the latest industry trends and technologies to continuously enhance development practices and drive innovation.
+            </p>
+
+            <button class="cover-letter-btn" onclick="openModal()">
+                View Cover Letter
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="coverLetterModal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">×</button>
+        <h2 style="margin-bottom: 2rem; color: var(--accent-color);">Cover Letter</h2>
+        <div class="cover-letter-text">
+
+            <p>Dear Hiring Manager,</p>
+            <br>
+
+            <p>I am writing to express my genuine interest in the Full Stack Developer position at your Company. With a passion for creating impactful digital experiences and a proven track record of delivering robust and user-centric solutions, I am excited to contribute my skills and dedication to your dynamic team.</p>
+            <br>
+
+            <p>My journey as a Full Stack Developer has been driven by an unquenchable thirst for knowledge and a relentless pursuit of mastery across both front-end and back-end technologies. I believe that successful development is a delicate fusion of creativity and technical prowess, and I am committed to crafting seamless, intuitive, and efficient applications that captivate users.</p>
+            <br>
+
+            <h3>Here's what sets me apart:</h3>
+            <br>
+
+            <p><strong>Full Stack Expertise:</strong> I have a solid foundation in a wide range of technologies including HTML, CSS, JavaScript, React, Node.js, VueJS, SQL, advanced PHP and more. This versatility empowers me to tackle complex challenges and contribute meaningfully to every phase of development.</p>
+            <br>
+
+            <p><strong>Problem Solver:</strong> My approach to coding goes beyond syntax. I am adept at breaking down intricate problems into manageable components, devising innovative solutions, and delivering effective software that exceeds expectations.</p>
+            <br>
+
+            <p><strong>User-Centric Mindset:</strong> I understand that exceptional software is not just about lines of code, it's about enhancing the user experience. I consistently strive to develop applications that are intuitive, engaging, and accessible, ensuring that end-users derive real value.</p>
+            <br>
+
+            <p><strong>Collaborative Team Player:</strong> I thrive in collaborative environments where I can learn from peers and contribute to the collective growth of the team. My communication skills and willingness to share insights make me an effective collaborator and a source of positive energy.</p>
+            <br>
+
+            <p><strong>Continuous Learner:</strong> The tech landscape evolves rapidly, and I am committed to staying ahead of the curve. I actively seek opportunities to learn about emerging technologies and best practices, ensuring that I can bring fresh perspectives and innovative solutions to the table.</p>
+            <br>
+
+            <p><strong>Portfolio of Success:</strong> Throughout my career, I have had the privilege of working on diverse projects that have honed my skills and expanded my capabilities.</p>
+            <br>
+
+            <p>Joining the Company would provide me with the platform to unleash my creativity, contribute to transformative projects, and collaborate with a team that shares my passion for innovation. I am excited about the prospect of contributing to your mission of Marketing Attribution, and I am confident that my dedication and expertise align seamlessly with your requirements.</p>
+            <br>
+
+            <p>Thank you for considering my application. I would welcome the opportunity to discuss how my skills and enthusiasm align with your team's needs during an interview. Please feel free to reach out to me.</p>
+            <br>
+
+            <p>Looking forward to becoming a valued member of the Company's family.</p>
+            <br>
+
+            <p>Sincerely,<br>
+                Michael Douman</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById('coverLetterModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('coverLetterModal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('coverLetterModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+</script>
+
+<section class="skills-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Technical Expertise</h2>
+        </div>
+
+        <!-- Navigation -->
+        <div class="skills-nav">
+            <button class="nav-tab active" data-tab="frontend">Frontend</button>
+            <button class="nav-tab" data-tab="frontend-framework">Frontend Frameworks</button>
+            <button class="nav-tab" data-tab="backend">Backend</button>
+            <button class="nav-tab" data-tab="backend-framework">Backend Frameworks</button>
+            <button class="nav-tab" data-tab="database">Database</button>
+            <button class="nav-tab" data-tab="devops">DevOps</button>
+            <button class="nav-tab" data-tab="version-control">Version Control</button>
+            <button class="nav-tab" data-tab="soft-skills">Soft Skills</button>
+            <button class="nav-tab" data-tab="apis">APIs</button>
+        </div>
+
+        <!-- Content -->
+        <div class="skills-content active" id="frontend">
+            <div class="skills-grid">
+                <!-- Left Column -->
+                <div class="skill-group">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="skill-group">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">TypeScript</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Sass</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Less</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-content" id="frontend-framework">
+            <div class="skills-grid">
+                <!-- Left Column -->
+                <div class="skill-group">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Vue.js</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Bootstrap</span>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="skill-group">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Tailwind CSS</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Materialize</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Angular</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-content" id="backend">
+            <div class="skills-grid">
+                <!-- Left Column -->
+                <div class="skill-group">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">PHP</span>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">C#</span>
+                            <span class="skill-percentage">86%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 86%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="skill-group">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Golang</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Node.js</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Java</span>
+                            <span class="skill-percentage">76%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 76%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-content" id="backend-framework">
+            <div class="framework-grid">
+                <!-- JavaScript Frameworks -->
+                <div class="framework-category">
+                    <h3 class="category-title">JavaScript (Node.js)</h3>
+                    <ul class="framework-list">
+                        <li class="framework-item">Express.js</li>
+                        <li class="framework-item">NestJS</li>
+                        <li class="framework-item">Sails.js</li>
+                        <li class="framework-item">Meteor</li>
+                    </ul>
+                </div>
+
+                <!-- Python Frameworks -->
+                <div class="framework-category">
+                    <h3 class="category-title">Python</h3>
+                    <ul class="framework-list">
+                        <li class="framework-item">Django</li>
+                        <li class="framework-item">Flask</li>
+                        <li class="framework-item">FastAPI</li>
+                    </ul>
+                </div>
+
+                <!-- Java Frameworks -->
+                <div class="framework-category">
+                    <h3 class="category-title">Java</h3>
+                    <ul class="framework-list">
+                        <li class="framework-item">Spring Boot</li>
+                        <li class="framework-item">JavaServer Faces (JSF)</li>
+                        <li class="framework-item">Dropwizard</li>
+                    </ul>
+                </div>
+
+                <!-- C# Frameworks -->
+                <div class="framework-category">
+                    <h3 class="category-title">C#</h3>
+                    <ul class="framework-list">
+                        <li class="framework-item">ASP.NET Core</li>
+                    </ul>
+                </div>
+
+                <!-- PHP Frameworks -->
+                <div class="framework-category">
+                    <h3 class="category-title">PHP</h3>
+                    <ul class="framework-list">
+                        <li class="framework-item">Laravel</li>
+                        <li class="framework-item">Symfony</li>
+                        <li class="framework-item">CodeIgniter</li>
+                    </ul>
+                </div>
+
+                <!-- Go Frameworks -->
+                <div class="framework-category">
+                    <h3 class="category-title">Go (Golang)</h3>
+                    <ul class="framework-list">
+                        <li class="framework-item">Revel</li>
+                        <li class="framework-item">Gin</li>
+                        <li class="framework-item">Beego</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* Additional styles for framework section */
+            .framework-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+
+            .framework-category {
+                background: var(--bg-card);
+                border: 1px solid var(--border-color);
+                border-radius: 12px;
+                padding: 1.5rem;
+                transition: transform 0.3s ease;
+            }
+
+            .framework-category:hover {
+                transform: translateY(-5px);
+            }
+
+            .category-title {
+                color: var(--primary);
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+                font-weight: 600;
+            }
+
+            .framework-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .framework-item {
+                color: var(--text-primary);
+                padding: 0.5rem 0;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition: transform 0.2s ease;
+            }
+
+            .framework-item::before {
+                content: '▹';
+                color: var(--primary);
+            }
+
+            .framework-item:hover {
+                transform: translateX(5px);
+                color: var(--primary);
+            }
+
+            @media (max-width: 1024px) {
+                .framework-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .framework-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <div class="skills-content" id="database">
+            <div class="skills-grid">
+                <!-- Left Column -->
+                <div class="skill-group">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">SQL</span>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">MongoDB</span>
+                            <span class="skill-percentage">91%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 91%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">GraphQL</span>
+                            <span class="skill-percentage">81%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 81%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="skill-group">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">PostgreSQL</span>
+                            <span class="skill-percentage">97%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 97%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Redis</span>
+                            <span class="skill-percentage">96%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 96%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Azure</span>
+                            <span class="skill-percentage">97%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 97%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-content" id="devops">
+            <div class="skills-grid">
+                <!-- Using full width for DevOps since there are fewer items -->
+                <div class="skill-group full-width">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Docker/Kubernetes</span>
+                            <span class="skill-percentage">93%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 93%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">NGINX / Apache</span>
+                            <span class="skill-percentage">94%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 94%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">AWS / Azure / Google Cloud Platform</span>
+                            <span class="skill-percentage">96%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 96%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* Additional styles for DevOps section */
+            .skill-group.full-width {
+                grid-column: 1 / -1; /* Spans full width */
+                max-width: 800px; /* Limit width for better readability */
+                margin: 0 auto; /* Center the content */
+            }
+
+            /* Specific styling for longer skill names */
+            .skill-header .skill-name {
+                font-size: 0.95rem; /* Slightly smaller font for longer text */
+            }
+
+            @media (max-width: 768px) {
+                .skill-group.full-width {
+                    max-width: 100%;
+                }
+            }
+        </style>
+
+        <div class="skills-content" id="version-control">
+            <div class="skills-grid">
+                <div class="skill-group full-width">
+                    <div class="skill-item version-control-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Git, GitHub, GitLab, Bitbucket</span>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%"></div>
+                        </div>
+
+                        <!-- Additional details section -->
+                        <div class="version-control-details">
+                            <ul class="version-control-list">
+                                <li>Git Version Control Systems</li>
+                                <li>Repository Management</li>
+                                <li>Branching Strategies</li>
+                                <li>CI/CD Integration</li>
+                                <li>Code Review Processes</li>
+                                <li>Team Collaboration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* Additional styles for Version Control section */
+            .version-control-item {
+                background: var(--bg-card);
+                border: 1px solid var(--border-color);
+                border-radius: 12px;
+                padding: 2rem;
+                transition: transform 0.3s ease;
+            }
+
+            .version-control-item:hover {
+                transform: translateY(-5px);
+            }
+
+            .version-control-details {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid var(--border-color);
+            }
+
+            .version-control-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .version-control-list li {
+                color: var(--text-secondary);
+                padding: 0.5rem 0;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .version-control-list li::before {
+                content: '▹';
+                color: var(--primary);
+            }
+
+            @media (max-width: 768px) {
+                .version-control-list {
+                    grid-template-columns: 1fr;
+                }
+
+                .version-control-item {
+                    padding: 1.5rem;
+                }
+            }
+        </style>
+
+        <div class="skills-content" id="soft-skills">
+            <div class="soft-skills-grid">
+                <!-- Technical Leadership Section -->
+                <div class="soft-skill-category">
+                    <div class="category-header">
+                        <h3 class="category-title">Technical Leadership</h3>
+                    </div>
+                    <ul class="soft-skill-list">
+                        <li>Mentoring and Coaching</li>
+                        <li>Technical Decision-Making</li>
+                        <li>Project Management</li>
+                        <li>Strategic Planning</li>
+                    </ul>
+
+                    <div class="category-header">
+                        <h3 class="category-title">Communication</h3>
+                    </div>
+                    <ul class="soft-skill-list">
+                        <li>Effective Verbal and Written Communication</li>
+                        <li>Stakeholder Management</li>
+                        <li>Conflict Resolution</li>
+                    </ul>
+                </div>
+
+                <!-- Team Collaboration Section -->
+                <div class="soft-skill-category">
+                    <div class="category-header">
+                        <h3 class="category-title">Team Collaboration</h3>
+                    </div>
+                    <ul class="soft-skill-list">
+                        <li>Cross-Functional Teamwork</li>
+                        <li>Agile Methodologies</li>
+                        <li>Collaboration Tools</li>
+                    </ul>
+
+                    <div class="category-header">
+                        <h3 class="category-title">Problem Solving</h3>
+                    </div>
+                    <ul class="soft-skill-list">
+                        <li>Analytical Thinking</li>
+                        <li>Creative Solutions</li>
+                        <li>Debugging and Troubleshooting</li>
+                    </ul>
+                </div>
+
+                <!-- Adaptability Section -->
+                <div class="soft-skill-category">
+                    <div class="category-header">
+                        <h3 class="category-title">Adaptability</h3>
+                    </div>
+                    <ul class="soft-skill-list">
+                        <li>Embracing Change</li>
+                        <li>Learning New Technologies</li>
+                        <li>Managing Uncertainty</li>
+                    </ul>
+
+                    <div class="category-header">
+                        <h3 class="category-title">Customer Focus</h3>
+                    </div>
+                    <ul class="soft-skill-list">
+                        <li>Understanding Client Needs</li>
+                        <li>Delivering High-Quality Solutions</li>
+                        <li>Customer Relationship Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* Soft Skills specific styles */
+            .soft-skills-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+
+            .soft-skill-category {
+                background: var(--bg-card);
+                border: 1px solid var(--border-color);
+                border-radius: 12px;
+                padding: 1.5rem;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .soft-skill-category:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .category-header {
+                margin-bottom: 1rem;
+                margin-top: 1.5rem;
+            }
+
+            .category-header:first-child {
+                margin-top: 0;
+            }
+
+            .category-title {
+                color: var(--primary);
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+                position: relative;
+                padding-left: 1rem;
+            }
+
+            .category-title::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 16px;
+                background: var(--primary);
+                border-radius: 2px;
+            }
+
+            .soft-skill-list {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.5rem 0;
+            }
+
+            .soft-skill-list li {
+                color: var(--text-secondary);
+                padding: 0.5rem 0;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition: transform 0.2s ease, color 0.2s ease;
+            }
+
+            .soft-skill-list li::before {
+                content: '▹';
+                color: var(--primary);
+                opacity: 0.8;
+            }
+
+            .soft-skill-list li:hover {
+                transform: translateX(5px);
+                color: var(--text-primary);
+            }
+
+            /* Responsive Design */
+            @media (max-width: 1024px) {
+                .soft-skills-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .soft-skills-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .soft-skill-category {
+                    padding: 1.25rem;
+                }
+            }
+        </style>
+
+        <div class="skills-content" id="apis">
+            <div class="skills-grid">
+                <div class="skill-group full-width">
+                    <!-- RESTful API -->
+                    <div class="skill-item api-item">
+                        <div class="skill-header">
+                            <span class="skill-name">RESTful API</span>
+                            <span class="skill-percentage">97%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 97%"></div>
+                        </div>
+                        <div class="api-details">
+                            <ul class="api-features-list">
+                                <li>API Design & Architecture</li>
+                                <li>RESTful Principles</li>
+                                <li>API Security & Authentication</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- SOAP -->
+                    <div class="skill-item api-item">
+                        <div class="skill-header">
+                            <span class="skill-name">SOAP</span>
+                            <span class="skill-percentage">96%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 96%"></div>
+                        </div>
+                        <div class="api-details">
+                            <ul class="api-features-list">
+                                <li>SOAP Protocol Implementation</li>
+                                <li>Web Services</li>
+                                <li>Enterprise Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- GraphQL -->
+                    <div class="skill-item api-item">
+                        <div class="skill-header">
+                            <span class="skill-name">GraphQL</span>
+                            <span class="skill-percentage">81%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 81%"></div>
+                        </div>
+                        <div class="api-details">
+                            <ul class="api-features-list">
+                                <li>Schema Design</li>
+                                <li>Query Resolution</li>
+                                <li>API Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* API Section specific styles */
+            .api-item {
+                background: var(--bg-card);
+                border: 1px solid var(--border-color);
+                border-radius: 12px;
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+                width: 100%;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .api-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .api-details {
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid var(--border-color);
+            }
+
+            .api-features-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .api-features-list li {
+                color: var(--text-secondary);
+                background: rgba(var(--primary), 0.1);
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                transition: all 0.3s ease;
+            }
+
+            .api-features-list li:hover {
+                background: rgba(var(--primary), 0.2);
+                color: var(--text-primary);
+                transform: translateY(-2px);
+            }
+
+            .skill-group.full-width {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /* Animation for progress bars */
+            .progress-fill {
+                animation: progressFill 1.5s ease-out forwards;
+            }
+
+            @keyframes progressFill {
+                from {
+                    transform: scaleX(0);
+                }
+                to {
+                    transform: scaleX(1);
+                }
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .api-item {
+                    padding: 1.25rem;
+                }
+
+                .api-features-list {
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+
+                .api-features-list li {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        </style>
+
+        <!-- Add remaining content sections... -->
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.nav-tab');
+        const contents = document.querySelectorAll('.skills-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.tab;
+
+                // Update active tab
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Update active content
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === target) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-content">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-description">Ready to collaborate? Reach out through any of these platforms</p>
+
+            <div class="contact-links">
+                <!-- Email -->
+                <a href="mailto:douman.artistic.eye@gmail.com" class="contact-item" data-tooltip="Send an email">
+                    <div class="contact-icon">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <span class="contact-label">Email</span>
+                    </div>
+                    <div class="hover-effect"></div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/michael-douman/" target="_blank" class="contact-item" data-tooltip="Connect on LinkedIn">
+                    <div class="contact-icon">
+                        <div class="icon-wrapper linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <span class="contact-label">LinkedIn</span>
+                    </div>
+                    <div class="hover-effect"></div>
+                </a>
+
+                <!-- GitHub -->
+<!--                <a href="https://github.com/digidmn" target="_blank" class="contact-item" data-tooltip="View GitHub">-->
+<!--                    <div class="contact-icon">-->
+<!--                        <div class="icon-wrapper github">-->
+<!--                            <i class="fab fa-github"></i>-->
+<!--                        </div>-->
+<!--                        <span class="contact-label">GitHub</span>-->
+<!--                    </div>-->
+<!--                    <div class="hover-effect"></div>-->
+<!--                </a>-->
+
+                <!-- Portfolio -->
+                <a href="https://www.digidmn.com/" target="_blank" class="contact-item" data-tooltip="Visit Portfolio">
+                    <div class="contact-icon">
+                        <div class="icon-wrapper portfolio">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <span class="contact-label">Portfolio</span>
+                    </div>
+                    <div class="hover-effect"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Updated Contact Section Styles */
+    .contact-section {
+        padding: 5rem 2rem;
+        background: linear-gradient(135deg, var(--bg-dark), #1e293b);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contact-content {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+    }
+
+    .contact-description {
+        color: var(--text-secondary);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .contact-item {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+
+    .contact-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        z-index: 2;
+    }
+
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .icon-wrapper i {
+        font-size: 1.8rem;
+        color: var(--text-primary);
+        transition: all 0.3s ease;
+    }
+
+    .contact-label {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    /* Icon-specific colors */
+    .icon-wrapper.linkedin {
+        background: rgba(10, 102, 194, 0.1);
+    }
+
+    .icon-wrapper.github {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .icon-wrapper.portfolio {
+        background: rgba(79, 70, 229, 0.1);
+    }
+
+    /* Hover effects */
+    .contact-item:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: var(--primary);
+    }
+
+    .contact-item:hover .icon-wrapper {
+        transform: scale(1.1);
+        background: var(--primary);
+    }
+
+    .contact-item:hover .icon-wrapper i {
+        color: white;
+    }
+
+    .contact-item:hover .contact-label {
+        color: var(--primary);
+    }
+
+    /* Tooltip */
+    .contact-item::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.5rem 1rem;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .contact-item:hover::after {
+        opacity: 1;
+        bottom: -50px;
+    }
+
+    /* Animation */
+    @keyframes iconFloat {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
         }
     }
 
-    // Check system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-        document.querySelector('.theme-toggle i').classList.replace('fa-moon', 'fa-sun');
-        document.querySelector('.theme-toggle-text').textContent = 'Light Mode';
+    .icon-wrapper {
+        animation: iconFloat 3s ease-in-out infinite;
     }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .contact-links {
+            gap: 1rem;
+        }
+
+        .contact-item {
+            width: 130px;
+            height: 130px;
+        }
+
+        .icon-wrapper {
+            width: 50px;
+            height: 50px;
+        }
+
+        .icon-wrapper i {
+            font-size: 1.5rem;
+        }
+
+        .contact-label {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .contact-item {
+            width: 110px;
+            height: 110px;
+        }
+
+        .contact-item::after {
+            display: none;
+        }
+    }
+</style>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <div class="experience-counter">
+                <span class="counter-number">10+</span>
+                <span class="counter-text">Years of Development</span>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="copyright">© <span id="currentYear">2024</span> Michael Douman</p>
+        </div>
+    </div>
+    <div class="footer-background">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+    </div>
+</footer>
+
+<style>
+    /* Contact Section Styles */
+    .contact-section {
+        padding: 5rem 2rem;
+        background: linear-gradient(135deg, var(--bg-dark), #1e293b);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contact-content {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .contact-description {
+        color: var(--text-secondary);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .contact-item {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+        overflow: hidden;
+    }
+
+    .contact-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        z-index: 2;
+    }
+
+    .contact-icon i {
+        font-size: 2rem;
+        color: var(--text-primary);
+        transition: all 0.3s ease;
+    }
+
+    .contact-label {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        transition: all 0.3s ease;
+    }
+
+    .hover-effect {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        opacity: 0;
+    }
+
+    .contact-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .contact-item:hover .hover-effect {
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        opacity: 0.1;
+    }
+
+    .contact-item:hover .contact-icon i,
+    .contact-item:hover .contact-label {
+        color: var(--primary);
+    }
+
+    /* Footer Styles */
+    .footer {
+        position: relative;
+        padding: 2rem;
+        background: var(--bg-dark);
+        overflow: hidden;
+    }
+
+    .footer-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .experience-counter {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .counter-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary);
+    }
+
+    .counter-text {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+
+    .copyright {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+
+    .footer-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        opacity: 0.1;
+    }
+
+    .grid-line {
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+        animation: gridPulse 3s infinite;
+    }
+
+    @keyframes gridPulse {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.7; }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .contact-links {
+            gap: 1rem;
+        }
+
+        .contact-item {
+            width: 100px;
+            height: 100px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .experience-counter {
+            align-items: center;
+        }
+    }
+</style>
+
+<script>
+    // Update current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
