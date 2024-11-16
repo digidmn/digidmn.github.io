@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCD Portfolio</title>
+    <link rel="icon" href="assets/images/digidomain3.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Font -->
+    <link href="https://fonts.cdnfonts.com/css/film-noir-adventure" rel="stylesheet">
+
+</head>
+<body class="bg-dark">
+
+<div id="backgroundjs">
+</div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-* border-bottom border-light mb-4 p-3">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/images/digidomain3.png" class="logo-brand" alt="title image"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mx-4 gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#showcase">Showcase</a>-->
+<!--                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<h4 class="text-center mb-5 styled-text text-white bg-charcoal p-2">Michael Douman</h4>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="container mt-5">
+        <h4 class="text-center mb-5 styled-text text-white bg-navy-blue p-2">About me</h4>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card bg-glass">
+                    <div class="card-body">
+                        <div class="card-quote text-center">
+                            <blockquote class="blockquote p-4 text-peach">
+                                <p class="mb-0">"It's not what you achieve, it's what you overcome. That's what defines your career."</p>
+                                <footer class="blockquote-footer m-2">Carlton Fisk</footer>
+                            </blockquote>
+                        </div>
+                        <p class="text-navy-blue">
+                            Hello!
+                            I’m Michael Douman, a passionate individual with a knack for creating innovative solutions.
+                            With a background in Information Software Development, I specialize in Fullstack development.
+                            My journey has been driven by curiosity and a desire to make a positive impact through my work.
+                        </p>
+
+                        <p class="text-navy-blue">
+                            I am a seasoned full-stack developer with over a decade of experience in building robust web applications.
+                            My expertise spans across front-end and back-end technologies, including but not limited to HTML, CSS, JavaScript, React, Node.js, PHP and Python.
+                            I thrive on solving complex problems and delivering scalable solutions.
+                            With a passion for continuous learning and innovation, I stay updated with the latest industry trends to ensure my work is cutting-edge and efficient.
+                            Let's build something amazing together!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section mt-5">
+    <div class="container skills-section">
+        <h4 class="text-center mb-5 styled-text text-white bg-navy-blue p-2">Skills</h4>
+
+        <div class="scroll-container-wrapper">
+            <button class="scroll-arrow left-arrow">&#10094;</button>
+            <div class="scroll-container">
+                <ul class="nav nav-tabs skillsTab border border-0" id="skillsTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active styled-text" id="frontend-tab" data-bs-toggle="tab" data-bs-target="#frontend" type="button" role="tab" aria-controls="frontend" aria-selected="true">Frontend</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link styled-text" id="frontend-framework-tab" data-bs-toggle="tab" data-bs-target="#frontend-framework" type="button" role="tab" aria-controls="frontend-framework" aria-selected="false">Frontend-Framework</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link styled-text" id="backend-tab" data-bs-toggle="tab" data-bs-target="#backend" type="button" role="tab" aria-controls="backend" aria-selected="false">Backend</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link styled-text" id="backend-framework-tab" data-bs-toggle="tab" data-bs-target="#backend-framework" type="button" role="tab" aria-controls="backend-framework" aria-selected="false">Backend-Framework</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link styled-text" id="database-tab" data-bs-toggle="tab" data-bs-target="#database" type="button" role="tab" aria-controls="database" aria-selected="false">Database</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link styled-text" id="devops-tab" data-bs-toggle="tab" data-bs-target="#devops" type="button" role="tab" aria-controls="devops" aria-selected="false">DevOps</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link styled-text" id="version-control-tab" data-bs-toggle="tab" data-bs-target="#version-control" type="button" role="tab" aria-controls="version-control" aria-selected="false">Version Control</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link styled-text" id="soft-skills-tab" data-bs-toggle="tab" data-bs-target="#soft-skills" type="button" role="tab" aria-controls="soft-skills" aria-selected="false">Soft Skills</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link styled-text" id="apis-tab" data-bs-toggle="tab" data-bs-target="#apis" type="button" role="tab" aria-controls="apis" aria-selected="false">APIs</button>
+                    </li>
+<!--                    <li class="nav-item" role="presentation">-->
+<!--                        <button class="nav-link styled-text" id="other-skills-tab" data-bs-toggle="tab" data-bs-target="#other-skills" type="button" role="tab" aria-controls="other-skills" aria-selected="false">Other Skills</button>-->
+<!--                    </li>-->
+                </ul>
+            </div>
+            <button class="scroll-arrow right-arrow">&#10095;</button>
+        </div>
+
+        <div class="tab-content" id="skillsTabContent">
+
+            <div class="tab-pane fade show active" id="frontend" role="tabpanel" aria-labelledby="frontend-tab">
+                <div class="card bg-transparent border border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="html" class="form-label">HTML</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">98%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="css" class="form-label">CSS</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">98%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="javascript" class="form-label">JavaScript</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="typescript" class="form-label">Typescript</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="sass" class="form-label">Sass</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="less" class="form-label">Less</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="frontend-framework" role="tabpanel" aria-labelledby="frontend-framework-tab">
+                <div class="card bg-transparent border border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="react" class="form-label">React</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="vue" class="form-label">Vue.js</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="bootstrap" class="form-label">Bootstrap</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">98%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="tailwind" class="form-label">Tailwind CSS</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="materialise" class="form-label">Materialize</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="angular" class="form-label">Angular</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 88%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">88%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="backend" role="tabpanel" aria-labelledby="backend-tab">
+                <div class="card bg-transparent border border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="php" class="form-label">PHP</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">98%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="python" class="form-label">Python</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="c#" class="form-label">C#</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 86%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">86%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="go" class="form-label">Golang</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="node" class="form-label">Node.js</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 92%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">92%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="java" class="form-label">Java</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 76%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">76%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="backend-framework" role="tabpanel" aria-labelledby="backend-framework-tab">
+                <div class="card bg-transparent border border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12 text-charcoal">
+                                <h6 class="styled-text">JavaScript (Node.js)</h6>
+                                <ul>
+                                    <li>Express.js</li>
+                                    <li>NestJS</li>
+                                    <li>Sails.js</li>
+                                    <li>Meteor</li>
+                                </ul>
+                                <h6 class="styled-text">Python</h6>
+                                <ul>
+                                    <li>Django</li>
+                                    <li>Flask</li>
+                                    <li>FastAPI</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-12 text-charcoal">
+                                <h6 class="styled-text">Java</h6>
+                                <ul>
+                                    <li>Spring Boot</li>
+                                    <li>JavaServer Faces (JSF)</li>
+                                    <li>Dropwizard</li>
+                                </ul>
+                                <h6 class="styled-text">C#</h6>
+                                <ul>
+                                    <li>ASP.NET Core</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-12 text-charcoal">
+                                <h6 class="styled-text">PHP</h6>
+                                <ul>
+                                    <li>Laravel</li>
+                                    <li>Symfony</li>
+                                    <li>CodeIgniter</li>
+                                </ul>
+                                <h6 class="styled-text">Go (Golang)</h6>
+                                <ul>
+                                    <li>Revel</li>
+                                    <li>Gin</li>
+                                    <li>Beego</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="database" role="tabpanel" aria-labelledby="database-tab">
+                <div class="card bg-transparent border border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="sql" class="form-label">SQL</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">98%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mongo" class="form-label">MongoDB</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 91%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">91%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="graphql" class="form-label">GraphQL</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 81%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">81%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="psql" class="form-label">PostgreSQL</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 97%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">97%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="redis" class="form-label">Redis</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 96%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">96%</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="azure" class="form-label">Azure</label>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 97%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">97%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="devops" role="tabpanel" aria-labelledby="devops-tab">
+                <div class="card bg-transparent border border-0">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="docker" class="form-label">Docker/Kubernetes</label>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 93%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">93%</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nginx" class="form-label">NGINX / Apache</label>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 94%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">94%</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="aws" class="form-label">AWS / Azure / Google Cloud Platform</label>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 96%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">96%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="version-control" role="tabpanel" aria-labelledby="version-control-tab">
+                <div class="card bg-transparent border border-0">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="version-control" class="form-label">Git, GitHub, GitLab, Bitbucket</label>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">98%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="soft-skills" role="tabpanel" aria-labelledby="soft-skills-tab">
+                <div class="card bg-transparent border border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12 text-charcoal">
+                                <h6 class="styled-text">Technical Leadership</h6>
+                                <ul>
+                                    <li>Mentoring and Coaching</li>
+                                    <li>Technical Decision-Making</li>
+                                    <li>Project Management</li>
+                                    <li>Strategic Planning</li>
+                                </ul>
+                                <h6 class="styled-text">Communication</h6>
+                                <ul>
+                                    <li>Effective Verbal and Written Communication</li>
+                                    <li>Stakeholder Management</li>
+                                    <li>Conflict Resolution</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-12 text-charcoal">
+                                <h6 class="styled-text">Team Collaboration</h6>
+                                <ul>
+                                    <li>Cross-Functional Teamwork</li>
+                                    <li>Agile Methodologies</li>
+                                    <li>Collaboration Tools</li>
+                                </ul>
+                                <h6 class="styled-text">Problem Solving</h6>
+                                <ul>
+                                    <li>Analytical Thinking</li>
+                                    <li>Creative Solutions</li>
+                                    <li>Debugging and Troubleshooting</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-12 text-charcoal">
+                                <h6 class="styled-text">Adaptability</h6>
+                                <ul>
+                                    <li>Embracing Change</li>
+                                    <li>Learning New Technologies</li>
+                                    <li>Managing Uncertainty</li>
+                                </ul>
+                                <h6 class="styled-text">Customer Focus</h6>
+                                <ul>
+                                    <li>Understanding Client Needs</li>
+                                    <li>Delivering High-Quality Solutions</li>
+                                    <li>Customer Relationship Management</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="apis" role="tabpanel" aria-labelledby="apis-tab">
+                <div class="card bg-transparent border border-0">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="restful" class="form-label">Restful Api</label>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 97%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">97%</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="soap" class="form-label">SOAP</label>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 96%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">96%</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="graphql" class="form-label">GraphQl</label>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 81%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">81%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other skills here -->
+
+        </div>
+    </div>
+</section>
+
+<!--&lt;!&ndash; Showcase of Work Section &ndash;&gt;-->
+<!--<section id="showcase" class="section mt-5">-->
+<!--    <div class="container mt-5">-->
+<!--        <h4 class="text-center mb-5 styled-text text-white bg-navy-blue p-2">Primary Contributions</h4>-->
+<!--        <div id="carouselExample" class="carousel slide">-->
+<!--            <div class="carousel-inner">-->
+<!--                <div class="carousel-item active">-->
+<!--                    <div class="d-flex justify-content-center gap-4">-->
+<!--                        <div class="card">-->
+<!--                            <img src="assets/images/tsi.png" class="card-img-top" alt="TSI">-->
+<!--                            <div class="card-body bg-charcoal text-coral">-->
+<!--                                <h5 class="card-title">TSI</h5>-->
+<!--                                <p class="card-text">central station logistics.</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="card">-->
+<!--                            <img src="assets/images/fnb.png" class="card-img-top" alt="FNB">-->
+<!--                            <div class="card-body bg-charcoal text-coral">-->
+<!--                                <h5 class="card-title">FNB</h5>-->
+<!--                                <p class="card-text">FNB Logistics system.</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="card">-->
+<!--                            <img src="assets/images/bwy.png" class="card-img-top" alt="BWY">-->
+<!--                            <div class="card-body bg-charcoal text-coral">-->
+<!--                                <h5 class="card-title">BWY</h5>-->
+<!--                                <p class="card-text">British wheel of Yoga.</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="card">-->
+<!--                            <img src="assets/images/staxo.png" class="card-img-top" alt="STAXO">-->
+<!--                            <div class="card-body bg-charcoal text-coral">-->
+<!--                                <h5 class="card-title">STAXO</h5>-->
+<!--                                <p class="card-text">STAXO Group UK.</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="carousel-item">-->
+<!--                    <div class="d-flex justify-content-center gap-4">-->
+<!--                        <div class="card">-->
+<!--                            <img src="assets/images/altron.png" class="card-img-top" alt="Altron">-->
+<!--                            <div class="card-body bg-charcoal text-coral">-->
+<!--                                <h5 class="card-title">Altron</h5>-->
+<!--                                <p class="card-text">Bytes People Solutions.</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="card">-->
+<!--                            <img src="assets/images/howarth.png" class="card-img-top" alt="Howarth">-->
+<!--                            <div class="card-body bg-charcoal text-coral">-->
+<!--                                <h5 class="card-title">Howarth</h5>-->
+<!--                                <p class="card-text">Howarth ofLondon.</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="card">-->
+<!--                            <img src="assets/images/sixtey.png" class="card-img-top" alt="Sixtey">-->
+<!--                            <div class="card-body bg-charcoal text-coral">-->
+<!--                                <h5 class="card-title">Sixtey</h5>-->
+<!--                                <p class="card-text">Sixtey Venues.</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="card">-->
+<!--                            <img src="assets/images/worldcon.png" class="card-img-top" alt="Worldcon">-->
+<!--                            <div class="card-body bg-charcoal text-coral">-->
+<!--                                <h5 class="card-title">Worldcon</h5>-->
+<!--                                <p class="card-text">Worldcon Glasgow.</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">-->
+<!--                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--                <span class="visually-hidden">Previous</span>-->
+<!--            </button>-->
+<!--            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">-->
+<!--                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--                <span class="visually-hidden">Next</span>-->
+<!--            </button>-->
+<!--            <div class="carousel-indicators position-relative">-->
+<!--                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
+<!--                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!-- Contact Me Section -->
+<section id="contact" class="section mt-5">
+    <div class="container contact-info">
+        <h4 class="text-center mb-5 styled-text text-white bg-navy-blue p-2">Contact</h4>
+        <div>
+            <a href="mailto:douman.artistic.eye@gmail.com" class="icon-circle"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/michael-douman/" target="_blank" class="icon-circle"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/digidmn" target="_blank" class="icon-circle"><i class="fab fa-github"></i></a>
+            <a href="https://www.digidmn.com/" target="_blank" class="icon-circle"><i class="fas fa-globe"></i></a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer border-top border-light mt-5">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-start text-light">
+                    <p class="mb-0">Developing since 2013</p>
+                </div>
+                <div class="col-md-6 text-end text-light">
+                    <p class="mb-0">© <span id="currentYear">2024</span> Michael Douman</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- END CONTENT -->
+
+<!-- Background JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
+<script id="vertexShader" type="x-shader/x-vertex">
+    void main() {
+        gl_Position = vec4( position, 1.0 );
+    }
+</script>
+<script id="fragmentShader" type="x-shader/x-fragment">
+    uniform vec2 u_resolution;
+    uniform vec2 u_mouse;
+    uniform float u_time;
+    uniform sampler2D u_noise;
+
+    #define PI 3.141592653589793
+    #define TAU 6.
+
+    const float multiplier = 15.5;
+
+    const float zoomSpeed = 10.;
+    const int layers = 10;
+
+    const int octaves = 5;
+
+    vec2 hash2(vec2 p)
+    {
+      vec2 o = texture2D( u_noise, (p+0.5)/256.0, -100.0 ).xy;
+      return o;
+    }
+
+    mat2 rotate2d(float _angle){
+        return mat2(cos(_angle),sin(_angle),
+                    -sin(_angle),cos(_angle));
+    }
+
+    vec3 hsb2rgb( in vec3 c ){
+      vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
+                               6.0)-3.0)-1.0,
+                       0.0,
+                       1.0 );
+      rgb = rgb*rgb*(3.0-2.0*rgb);
+      return c.z * mix( vec3(1.0), rgb, c.y);
+    }
+
+    float hash(vec2 p)
+    {
+      float o = texture2D( u_noise, (p+0.5)/256.0, -100.0 ).x;
+      return o;
+    }
+    float noise(vec2 uv) {
+      vec2 id = floor(uv);
+      vec2 subuv = fract(uv);
+      vec2 u = subuv * subuv * (3. - 2. * subuv);
+      float a = hash(id);
+      float b = hash(id + vec2(1., 0.));
+      float c = hash(id + vec2(0., 1.));
+      float d = hash(id + vec2(1., 1.));
+      return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
+    }
+    float fbm(in vec2 uv) {
+      float s = .0;
+      float m = .0;
+      float a = .5;
+      for(int i = 0; i < octaves; i++) {
+        s += a * noise(uv);
+        m += a;
+        a *= .5;
+        uv *= 2.;
+      }
+      return s / m;
+    }
+
+    vec3 domain(vec2 z){
+      return vec3(hsb2rgb(vec3(atan(z.y,z.x)/TAU,1.,1.)));
+    }
+    vec3 colour(vec2 z) {
+        return domain(z);
+    }
+
+    // The render function is where we render the pattern to be added to the layer
+    vec3 render(vec2 uv, float scale, vec3 colour) {
+      vec2 id = floor(uv);
+      vec2 subuv = fract(uv);
+      vec2 rand = hash2(id);
+      float bokeh = abs(scale) * 1.;
+
+      float particle = 0.;
+
+      if(length(rand) > 1.3) {
+        vec2 pos = subuv-.5;
+        float field = length(pos);
+        particle = smoothstep(.3, 0., field);
+        particle += smoothstep(.4 * bokeh, 0.34 * bokeh, field);
+      }
+      return vec3(particle*2.);
+    }
+
+    vec3 renderLayer(int layer, int layers, vec2 uv, inout float opacity, vec3 colour, float n) {
+      vec2 _uv = uv;
+      // Scale
+      // Generating a scale value between zero and 1 based on a mod of u_time
+      // A frequency of 10 divided by the layer index (10 / layers * layer)
+      float scale = mod((u_time + zoomSpeed / float(layers) * float(layer)) / zoomSpeed, -1.);
+      uv *= 20.; // The initial scale. Increasing this makes the cells smaller and the "speed" appears faster
+      uv *= scale*scale; // then modifying the overall scale by the generated amount
+      // uv *= 1. + ( ( n*.5 ) * ( length(_uv) ) );
+      // uv += .5*float(layer);
+      uv = rotate2d(u_time / 10.) * uv; // rotating
+      uv += vec2(25. + sin(u_time*.1)) * float(layer); // offsetting the UV by an arbitrary amount to make the layer appear different
+
+      // render
+      vec3 pass = render(uv * multiplier, scale, colour) * .2; // render the pass
+
+       // this is the opacity of the layer fading in from the "bottom"
+      opacity = 1. + scale;
+      float _opacity = opacity;
+
+      // pass += n * .5 * mix(vec3(0., .5, 1.5), vec3(1., .5, 0.), opacity);
+
+      // This is the opacity of the layer fading out at the top (we want this minimal, hence the smoothstep)
+      float endOpacity = smoothstep(0., 0.4, scale * -1.);
+      opacity += endOpacity;
+
+      return pass * _opacity * endOpacity;
+    }
+
+    void main() {
+        vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy);
+
+        if(u_resolution.y < u_resolution.x) {
+          uv /= u_resolution.y;
+        } else {
+          uv /= u_resolution.x;
+        }
+
+        // uv.y += cos(u_time * .1) * .5;
+        // uv.x += sin(u_time * .1) * .5;
+
+        // float n = fbm(uv * 3. - 2.);
+        float n = fbm((uv + vec2(sin(u_time*.1), u_time*.1)) * 2. - 2.);
+
+        vec3 colour = vec3(0.);
+        // colour = n * mix(vec3(0.6, 0.8, 1.0), vec3(0.1, 0.3, 0.8), n);
+         colour = n * mix(vec3(0.6, 0.8, 1.0)*.1, clamp(vec3(0.1, 0.3, 0.8)*2., 0., 1.), n);
+        // colour -= n*n*n*n*.4;
+        // colour += smoothstep(.8, 2.5, sin(n*n*n*8.))*.4;
+
+        float opacity = 1.;
+        float opacity_sum = 1.;
+
+        for(int i = 1; i <= layers; i++) {
+          colour -= renderLayer(i, layers, uv, opacity, colour, n);
+          opacity_sum += opacity;
+        }
+
+        colour /= opacity_sum;
+
+        gl_FragColor = vec4(clamp(colour * 20., 0., 1.),1.0);
+    }
+</script>
+
+<!-- Typescript and dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/5.5.4/typescript.min.js" integrity="sha512-+OQ7EhKAdg2xDkQqjggEMvZXOZ8PjxXTADApUzbG3DVzQ+TFPZtBX+bZ7bIu/lsYGwoCo0gI0A7yqx+6mT4hhg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/ccapture.js"></script>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script src="assets/js/scripts.js"></script>
+<script src="assets/js/background.js"></script>
+
+</body>
+</html>
+
